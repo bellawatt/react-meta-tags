@@ -1,5 +1,5 @@
 {
-  "name": "meta-tags",
+  "name": "@bellawatt/meta-tags",
   "version": "1.0.0",
   "description": "A nice api for meta tag coverage across a variety of sites and services",
   "author": "@BrandonShar",
@@ -57,5 +57,9 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "react-helmet": "^5.2.1",
+    "react-snap": "^1.23.0"
+  }
 }

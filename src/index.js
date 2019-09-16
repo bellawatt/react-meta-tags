@@ -1,22 +1,58 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet'
 
-import styles from './styles.css'
+const MetaTags = ({children}) => (
+  <React.Fragment>
+    <Helmet>
+      <meta charset='utf-8' />
+      <meta name='og:type' content='website' />
+    </Helmet>
+    {children}
+  </React.Fragment>
+)
 
-export default class ExampleComponent extends Component {
-  static propTypes = {
-    text: PropTypes.string
-  }
+MetaTags.Title = ({children}) => (
+  <Helmet>
+    <title>{children}</title>
+    <meta itemProp='name' content={children} />
+    <meta name='twitter:title' content={children} />
+    <meta name='og:title' content={children} />
+  </Helmet>
+)
 
-  render() {
-    const {
-      text
-    } = this.props
+MetaTags.Description = ({children}) => (
+  <Helmet>
+    <meta name='description' content={children} />
+    <meta itemProp='description' content={children} />
+    <meta name='twitter:description' content={children} />
+    <meta name='og:description' content={children} />
+  </Helmet>
+)
 
-    return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
-    )
-  }
+MetaTags.Image = ({src}) => (
+  <Helmet>
+    <meta name='image' content={src} />
+    <meta itemProp='image' content={src} />
+    <meta name='twitter:image:src' content={src} />
+    <meta name='og:image' content={src} />
+  </Helmet>
+)
+
+MetaTags.propTypes = {
+  children: PropTypes.node
 }
+
+MetaTags.Title.propTypes = {
+  children: PropTypes.string.isRequired
+}
+
+MetaTags.Description.propTypes = {
+  children: PropTypes.string.isRequired
+}
+
+MetaTags.Image.propTypes = {
+  src: PropTypes.string.isRequired
+}
+
+export default MetaTags

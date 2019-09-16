@@ -7,20 +7,27 @@
 ## Install
 
 ```bash
-npm install --save meta-tags
+npm install --save @bellawatt/meta-tags
 ```
 
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
-
-import MyComponent from 'meta-tags'
+import React from 'react'
+import Meta from 'meta-tags'
 
 class Example extends Component {
   render () {
     return (
-      <MyComponent />
+      <>
+        <Meta>
+          <Meta.Title>I am the title</Meta.Title>
+          <Meta.Description>
+            And I'm the description. I'm much longer sometimes
+          </Meta.Description>
+          <Meta.Image src="/some-great-image.png" />
+        </Meta>
+      </>
     )
   }
 }
@@ -28,4 +35,4 @@ class Example extends Component {
 
 ## License
 
-MIT © [@BrandonShar](https://github.com/@BrandonShar)
+MIT © [@bellawatt](https://github.com/@bellawatt)
