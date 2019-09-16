@@ -33,6 +33,8 @@ class Example extends Component {
 }
 ```
 
+Be sure to add `react-snap` (included in this repo) to your build step if you're using react-router.
+
 ## License
 
 MIT © [@bellawatt](https://github.com/@bellawatt)
