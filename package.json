@@ -1,6 +1,6 @@
 {
   "name": "@bellawatt/meta-tags",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A nice api for meta tag coverage across a variety of sites and services",
   "author": "@BrandonShar",
   "license": "MIT",

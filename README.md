@@ -14,23 +14,19 @@ npm install --save @bellawatt/meta-tags
 
 ```jsx
 import React from 'react'
-import Meta from 'meta-tags'
+import Meta from '@bellawatt/meta-tags'
 
-class Example extends Component {
-  render () {
-    return (
-      <>
-        <Meta>
-          <Meta.Title>I am the title</Meta.Title>
-          <Meta.Description>
-            And I'm the description. I'm much longer sometimes
-          </Meta.Description>
-          <Meta.Image src="/some-great-image.png" />
-        </Meta>
-      </>
-    )
-  }
-}
+const Example = () => (
+  <>
+    <Meta>
+      <Meta.Title>I am the title</Meta.Title>
+      <Meta.Description>
+        And I am the description! I can be much longer sometimes
+      </Meta.Description>
+      <Meta.Image src="/some-great-image.png" />
+    </Meta>
+  </>
+)
 ```
 
 Be sure to add `react-snap` (included in this repo) to your build step if you're using react-router.
