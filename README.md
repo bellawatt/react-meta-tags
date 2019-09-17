@@ -33,4 +33,4 @@ Be sure to add `react-snap` (included in this repo) to your build step if you're
 
 ## License
 
-MIT © [@bellawatt](https://github.com/@bellawatt)
+MIT © [@bellawatt](https://github.com/bellawatt)
